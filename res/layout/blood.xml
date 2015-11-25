@@ -3,7 +3,7 @@
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#0088cc"
+    android:background="#268bcb"
     android:fillViewport="true" >
 
     <LinearLayout
@@ -16,12 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:gravity="center"
             android:text="@string/what_is_blood_"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="20sp"
+            android:background="#b5263a"
+            android:textColor="#fff"
             android:typeface="serif" />
 
         />
@@ -34,22 +35,27 @@
             android:layout_marginRight="20dp"
             android:gravity="center|fill"
             android:lineSpacingExtra="1dp"
-            android:paddingLeft="5dp"
-            android:text="Blood is made up of liquid ,called plasma,and various different types of cells.An average sized man has about 5-6 litres of blood in his body; a woman has slightly less.Blood is made up of two elements.They are Blood cells and Plasma.Blood cells are\n\n1)Red Cells(Erythrocytes) \n2)White Cells(Leukocytes) \n3)Platelets.\n\nAnd Plasma is the liquid part of blood and makes up about 60% of the bloods volume"
+            android:text="Blood is made up of liquid ,called plasma,and various different types of cells.An average sized man has about 5-6 litres of blood in his body; a woman has slightly less.Blood is made up of two elements.They are Blood cells and Plasma.Blood cells are\n\n1)Red Cells(Erythrocytes) \n2)White Cells(Leukocytes) \n3)Platelets.\n\nAnd Plasma is the liquid part of blood and makes up about 60% of the bloods volume.\n"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff"
             android:textSize="18sp"
+            android:padding="3dp"
+            android:typeface="sans"
             android:textStyle="normal" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:gravity="center"
             android:text="Blood Types &amp; Groups"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="20sp"
+             android:background="#b5263a"
+            android:textColor="#fff"
+             android:textStyle="normal"
             android:typeface="serif" />
 
         <TextView
@@ -63,55 +69,57 @@
             android:fitsSystemWindows="true"
             android:includeFontPadding="true"
             android:lineSpacingExtra="1dp"
-            android:paddingLeft="5dp"
             android:selectAllOnFocus="false"
-            android:text="There are eight different common blood types which are determined by the presence or absence of certain antigens,which are substances that  can trigger an immune response if they are foreign  to the human body.Since some antigenscan triggers patients immune system to attack the transfused blood, safe blood transfusions depend on careful  blood typing and  cross-matching\n\nThere are 4 major blood groups determined by the presence or absence of two antigens(A and B) on the surface of red blood cells"
+            android:text="There are eight different common blood types which are determined by the presence or absence of certain antigens,which are substances that  can trigger an immune response if they are foreign  to the human body.Since some antigenscan triggers patients immune system to attack the transfused blood, safe blood transfusions depend on careful  blood typing and  cross-matching\n\nThere are 4 major blood groups determined by the presence or absence of two antigens(A and B) on the surface of red blood cells."
             android:textAlignment="gravity"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff"
             android:textSize="18sp"
+            android:padding="3dp"
             android:textStyle="normal"
             android:typeface="sans" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp" >
+            android:layout_margin="10dp"
+            >
 
             <TableRow
                 android:id="@+id/tableRow1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp" >
+                android:layout_margin="5dp"
+                android:background="#b5263a"
+               >
 
                 <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="34dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="#2299cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                 
+                    android:layout_weight="1" 
                     android:gravity="center"
-                    android:text="BloodGroup"
-                    android:textStyle="bold"
+                    
+                    android:text="Blood Group"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
                     android:typeface="serif" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    
                     android:layout_weight="2"
-                    android:background="#2299cc"
-                    android:gravity="center"
+                    
+                    android:padding="10dp"
                     android:text="Antigen"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
                     android:typeface="serif" />
 
             </TableRow>
@@ -127,16 +135,20 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_marginBottom="5dp"
+                      android:layout_margin="5dp"
                       android:layout_weight="1"
                       android:text="A"
-                      android:textSize="16sp" />
+                      android:textColor="#fff"
+                      android:padding="2dp"
+                      android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="2"
-                android:text="Antigen A on re Cells and B antibody in the plasma"
+                android:text="Antigen A on red Cells and B antibody in the plasma."
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:typeface="serif" />
 
@@ -156,14 +168,18 @@
                       android:layout_weight="1"
                       android:includeFontPadding="true"
                       android:text="B"
-                      android:textSize="16sp" />
+                       android:textColor="#fff"
+                      android:padding="2dp"
+                      android:textSize="18sp"
+                      android:typeface="serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="2"
-                android:text="Antigen B on red cells and A antibody in the plasma"
+                android:text="Antigen B on red cells and A antibody in the plasma."
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:typeface="serif" />
 
@@ -182,7 +198,9 @@
                       android:layout_marginBottom="5dp"
                       android:layout_weight="1"
                       android:text="AB"
-                      android:textSize="16sp"
+                      android:textColor="#fff"
+                      android:padding="2dp"
+                      android:textSize="18sp"
                       android:typeface="serif" />
 
             <TextView
@@ -190,7 +208,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="2"
-                android:text="Both Antigen A and B on red cells and no antibody in the plasma"
+                android:text="Both Antigen A and B on red cells and no antibody in the plasma."
+                android:textColor="#fff"
                 android:textSize="16sp" />
 
         </TableRow>
@@ -208,7 +227,9 @@
                       android:layout_marginBottom="10dp"
                       android:layout_weight="1"
                       android:text="O"
-                      android:textSize="16sp"
+                      android:textColor="#fff"
+                      android:padding="2dp"
+                      android:textSize="18sp"
                       android:typeface="serif" />
 
             <TextView
@@ -217,6 +238,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="2"
                 android:text="No Antigen on red cells and Both  A and B antibodies are in the plasma."
+                android:textColor="#fff"
                 android:textSize="16sp" />
 
         </TableRow>

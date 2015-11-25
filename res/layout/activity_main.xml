@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/p" >
+    android:background="#fff" >
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="8dp"
-    android:background="@drawable/p"
+    android:background="#fff"
     android:gravity="center"
     android:orientation="vertical" >
 
@@ -17,24 +17,26 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
+         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/anotherbutton"
+        android:background="#268bcb"
         android:text="Blood"
         android:textSize="22sp"
+        android:textColor="#fff"
+       
         android:typeface="serif" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/anotherbutton"
+        android:background="#268bcb"
         android:text="Blood Donation"
+        android:textColor="#fff"
         android:textSize="22sp"
         android:typeface="serif" />
 
@@ -42,11 +44,12 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/anotherbutton"
+        android:background="#268bcb"
         android:text="Precautions"
+        android:textColor="#fff"
         android:textSize="22sp"
         android:typeface="serif" />
 
@@ -54,11 +57,12 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
+         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/anotherbutton"
+        android:background="#268bcb"
         android:text="Blood Account"
+        android:textColor="#fff"
         android:textSize="22sp"
         android:typeface="serif" />
 
@@ -66,21 +70,26 @@
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/anotherbutton"
+        android:background="#268bcb"
         android:text="Search"
+        android:textColor="#fff"
+        android:typeface="serif" 
         android:textSize="22sp" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="65dp"
+       android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/anotherbutton"
+        android:background="#268bcb"
+        android:textColor="#fff"
         android:text="About Me"
+        android:typeface="serif" 
         android:textSize="22sp" />
 
 </LinearLayout>

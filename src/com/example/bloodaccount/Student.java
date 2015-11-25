@@ -8,6 +8,7 @@ public class Student {
 	private String dept;
 	private String mobile;
 	private String bgroup;
+	//public int idno;
 	public Student(int id, String name, String batch, String dept,
 			String mobile, String bgroup) {
 		this.id = id;
@@ -82,6 +83,11 @@ public class Student {
 				+ ", dept=" + dept + ", mobile=" + mobile + ", bgroup="
 				+ bgroup + "]";*/
 		return "Student id=" + id + "\n Name=" + name + "\n Batch=" + batch
+				+ "\t Department=" + dept + "\n BloodGroup=" + bgroup + "\n Mobile Number="
+				+ mobile ;
+	}
+	public String getString(){
+		return "Student Name=" + name + "\n Batch=" + batch
 				+ "\t Department=" + dept + "\n BloodGroup=" + bgroup + "\n Mobile Number="
 				+ mobile ;
 	}

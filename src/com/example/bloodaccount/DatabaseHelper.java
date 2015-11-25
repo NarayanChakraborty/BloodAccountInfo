@@ -7,8 +7,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+
 
 public class DatabaseHelper extends SQLiteOpenHelper{
           
@@ -21,7 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 	public static final String KEY_GROUP="blood_group";
 	public static final String KEY_MOBILE="mob_number";
 	
-	private static final String DATABASE_NAME="studentbloodinfo";
+	private static final String DATABASE_NAME="studentbloodAccount";
 	private static final String DATABASE_TABLE="studentTable";
 	private static final int DATABASE_VERSION=1;
 	private DatabaseHelper(Context context) {
@@ -41,7 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("CREATE TABLE "+DATABASE_TABLE+" (" +
-	              KEY_ROWID+" INTEGER PRIMARY KEY AUTOINCREMENT, " +
+	              KEY_ROWID+" INTEGER PRIMARY kEY, " +
 				  KEY_NAME+" TEXT NOT NULL, " + 
 	              KEY_BATCH+" TEXT NOT NULL, " +
 	              KEY_DEPT+" TEXT NOT NULL, " + 
@@ -65,7 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 		values.put(KEY_DEPT,s.getDept());
 		values.put(KEY_GROUP,s.getBgroup());
 		values.put(KEY_MOBILE,s.getMobile());
-		long inserted=db.insertOrThrow(DATABASE_TABLE,null, values);
+		long inserted=db.insert(DATABASE_TABLE,null, values);
 		db.close();
 		return inserted;
 	}
@@ -73,27 +73,25 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 	{
 		ArrayList<Student> std=new ArrayList<Student>();
 		SQLiteDatabase db=this.getReadableDatabase();
-		//Cursor cr=db.query(DATABASE_TABLE, null,KEY_GROUP +" LIKE '%"+ KeyWord +"%'",null,null,null,null);
-		Cursor cr=db.rawQuery(
-				"select * from studentTable where blood_group LIKE '%"+ keyword + "%';"
-				, null);
+		Cursor cr=db.query(DATABASE_TABLE, null,"blood_group LIKE '%"+keyword+"%'",null,null,null,null);
+		//Cursor cr=db.rawQuery("select * from studentTable where blood_group LIKE '%"+ keyword + "%';", null);
 						
 		if(cr!=null && cr.getCount()>0)
 		{
-		cr.moveToFirst();
-		for(int i=0;i<cr.getCount();i++)
-		  {
-			
-				int irow=cr.getInt(cr.getColumnIndex(KEY_ROWID));
-				String iName=cr.getString(cr.getColumnIndex(KEY_NAME));
-				String iBatch=cr.getString(cr.getColumnIndex(KEY_BATCH));
-				String iDept=cr.getString(cr.getColumnIndex(KEY_DEPT));
-				String iGroup=cr.getString(cr.getColumnIndex(KEY_GROUP));
-				String iMob=cr.getString(cr.getColumnIndex(KEY_MOBILE));
-				Student s=new Student(irow,iName,iBatch,iDept,iMob,iGroup);
-			    std.add(s);
-				cr.moveToNext();
-		   }	
+			cr.moveToFirst();
+			for(int i=0;i<cr.getCount();i++)
+			  {
+				
+					int irow=cr.getInt(cr.getColumnIndex(KEY_ROWID));
+					String iName=cr.getString(cr.getColumnIndex(KEY_NAME));
+					String iBatch=cr.getString(cr.getColumnIndex(KEY_BATCH));
+					String iDept=cr.getString(cr.getColumnIndex(KEY_DEPT));
+					String iGroup=cr.getString(cr.getColumnIndex(KEY_GROUP));
+					String iMob=cr.getString(cr.getColumnIndex(KEY_MOBILE));
+					Student s=new Student(irow,iName,iBatch,iDept,iMob,iGroup);
+				    std.add(s);
+					cr.moveToNext();
+			   }	
 		}
 		cr.close();
 		db.close();
@@ -109,7 +107,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 			c.moveToFirst();
 		for(int i=0;i<c.getCount();i++)
 		{
-			
 			int irow=c.getInt(c.getColumnIndex(KEY_ROWID));
 			String iName=c.getString(c.getColumnIndex(KEY_NAME));
 			String iBatch=c.getString(c.getColumnIndex(KEY_BATCH));
@@ -119,7 +116,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 			Student s=new Student(irow,iName,iBatch,iDept,iMob,iGroup);
 			allinformation.add(s);
 			c.moveToNext();
-		}	
+		  }	
 		}
 		c.close();
 		db.close();
@@ -201,8 +198,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 		OurDatabase.close();
 		return null;
 	}
-	public void updateEntry(long lng, String rname, String rgroup,String rbatch,String rdept,String rmob)throws SQLException {
+	public int updateEntry(long lng, String rname, String rgroup,String rbatch,String rdept,String rmob)throws SQLException {
 		// TODO Auto-generated method stub
+		
 		SQLiteDatabase OurDatabase=this.getReadableDatabase();
 		ContentValues cv=new ContentValues();
 		cv.put(KEY_NAME, rname);
@@ -210,13 +208,17 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 		cv.put(KEY_BATCH, rbatch);
 		cv.put(KEY_DEPT, rdept);
 		cv.put(KEY_MOBILE, rmob);
-		OurDatabase.update(DATABASE_TABLE, cv, KEY_ROWID+"="+lng,null);
+		int updatecount=OurDatabase.update(DATABASE_TABLE, cv, KEY_ROWID+"="+lng,null);
 		OurDatabase.close();
+		return updatecount;
 		
 	}
-	public void deleteEntry(long dlng) throws SQLException{
+	public int deleteEntry(long dlng) throws SQLException{
 		// TODO Auto-generated method stub
 		SQLiteDatabase OurDatabase=this.getReadableDatabase();
-		OurDatabase.delete(DATABASE_TABLE, KEY_ROWID+"="+dlng,null);
+		int Deletecount=OurDatabase.delete(DATABASE_TABLE, KEY_ROWID+"="+dlng,null);
+		OurDatabase.close();
+		return Deletecount;
 	}
+
 }

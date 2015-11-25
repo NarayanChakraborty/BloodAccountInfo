@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:layout_marginTop="4dp"
-    android:background="@drawable/p"
+    android:layout_height="80dp"
+    android:background="#268bcb"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:layout_margin="1dp"
+    android:padding="1dp"
+     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="5dp" >
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.98"
+            android:text="TextView"
+            android:textColor="#eded3f"
+            android:textSize="15sp"
+            android:typeface="serif" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp" >
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_weight="1"
+            android:layout_weight="0.98"
             android:text="TextView"
             android:textColor="#000000"
+            android:textSize="18sp"
             android:typeface="serif" />
 
         <TextView
-            android:id="@+id/txtMobile"
+            android:id="@+id/txtGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.54"
             android:gravity="center"
             android:text="TextView"
-            android:textColor="#ffff33" />
+            android:textColor="#c63f53"
+            android:textSize="18sp"
+             android:typeface="serif"  />
 
     </LinearLayout>
 
@@ -38,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
         android:gravity="center" >
 
@@ -47,28 +72,37 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginLeft="4dp"
-            android:layout_weight="1"
+            android:layout_marginRight="2dp"
             android:text="TextView"
-            android:textColor="#ffccff" />
+            android:textColor="#ff88ff"
+             android:typeface="serif" 
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtDept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="2"
+            android:layout_weight="0.51"
             android:text="TextView"
-            android:textColor="#ffccff" />
+            android:textColor="#66ffbb"
+            android:textSize="18sp"
+             android:typeface="serif" 
+             />
 
         <TextView
-            android:id="@+id/txtGroup"
+            android:id="@+id/txtMobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="right"
             android:text="TextView"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+             android:typeface="serif" 
+             />
 
     </LinearLayout>
 
