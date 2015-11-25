@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vname"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/p" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="464dp"
+    android:background="@drawable/p"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp" >
+
+    <requestFocus />
+
+    <EditText
+        android:id="@+id/edtMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/vmobile"
+        android:layout_alignRight="@+id/edtGroup"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/vmobile"
+        android:background="#ddffff"
+        android:ems="10"
+        android:hint="Mobile,Optional"
+        android:textColor="#FF9900" />
+
+    <EditText
+        android:id="@+id/edtGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/vgroup"
+        android:layout_alignBottom="@+id/vgroup"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/vgroup"
+        android:background="#ddffff"
+        android:ems="10"
+        android:hint="Group,Must"
+        android:textColor="#FF9900" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/vname"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="Name:"
+        android:textColor="#44eeff"
+        android:textSize="18sp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtMobile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="51dp" >
+
+        <Button
+            android:id="@+id/view"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button"
+            android:enabled="true"
+            android:text="All Users" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="108dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/button"
+            android:text="New Account" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vname"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="10dp"
+        android:text="Blood Group:"
+        android:textColor="#44eeff"
+        android:textSize="18sp"
+        android:typeface="monospace" />
+
+    <TextView
+        android:id="@+id/vmobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vgroup"
+        android:layout_below="@+id/edtGroup"
+        android:layout_marginTop="20dp"
+        android:text="Mobile No:"
+        android:textColor="#44eeff"
+        android:textSize="18sp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edtName"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/vbatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.32"
+            android:text="Batch:"
+            android:textColor="#44eeff"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/editBatch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ddffff"
+            android:ems="10"
+            android:hint="Batch"
+            android:textColor="#FF9900" />
+
+        <TextView
+            android:id="@+id/vdept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Dept:"
+            android:textColor="#44eeff"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/edtDept"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#ddffff"
+            android:ems="10"
+            android:hint="Dept,Must"
+            android:textColor="#ff9900" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="23dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.03"
+            android:text="Enter Row Id"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:typeface="serif" />
+
+        <EditText
+            android:id="@+id/editRow"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.15"
+            android:background="#ddffff"
+            android:hint="StudentId" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vmobile"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:background="#0099CC"
+            android:text="Edit"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:background="#0099CC"
+            android:text="Delete"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/infoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0099CC"
+            android:text="Info"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/edtGroup"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/vname"
+        android:background="#ddffff"
+        android:ems="10"
+        android:hint="Name ,Must"
+        android:textColor="#ff9900" />
+
+</RelativeLayout>
+
+  </ScrollView>

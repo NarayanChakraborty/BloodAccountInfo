@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nstu_bloodaccount"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:debuggable="false">
+        <activity
+            android:name="com.example.bloodaccount.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.bloodaccount.SQLView"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.bloodaccount.Blood"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.bloodaccount.Bgroup"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.bloodaccount.Precautions"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.bloodaccount.Marry"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.bloodaccount.Account"
+            android:screenOrientation="portrait" />
+         <activity android:name="com.example.bloodaccount.SearchBlood"
+            android:screenOrientation="portrait" />
+          <activity android:name="com.example.bloodaccount.AboutMe"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
